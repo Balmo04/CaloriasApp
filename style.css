@@ -7,15 +7,28 @@
     background: rgb(75, 86, 122);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 10vh;
 }
-.grid{
-    display: grid;
-    grid-template-columns:  repeat(3, 1fr);
-}
+
 .img-size-header{
     height: 4em;
+}
+.btn-size-header{
+    width: fit-content;
+}
+.btn-style-header{
+    border: none;
+    background-color: rgb(75, 86, 122);
+    cursor: pointer;
+}
+.btn-style-header:hover{
+    border-radius: 9%;
+    background-color: rgb(87, 85, 85);
+}
+.btn-style-header:focus{
+    border-radius: 9%;
+    background-color: rgb(122, 120, 120);
 }
 .centrar{
     display: flex;
@@ -90,5 +103,5 @@
     cursor: pointer;
 }
 .focus:hover{
-    background-color: rgb(142, 215, 228);
+    background-color: rgb(101, 107, 167);
 }
