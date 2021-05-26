@@ -1,110 +1,136 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-.bg-blanco{  
-    background: rgb(75, 86, 122);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 10vh;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
-.img-size-header{
-    height: 3.5em;
+.bg-blanco {
+  background: rgb(75, 86, 122);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 10vh;
 }
-.btn-size-header{
-    width: fit-content;
+
+.img-size-header {
+  height: 3.5em;
 }
-.btn-style-header{
-    border: none;
-    background-color: rgb(75, 86, 122);
-    cursor: pointer;
+
+.btn-size-header {
+  width: fit-content;
 }
-.btn-style-header:hover{
-    border-radius: 9%;
-    background-color: rgb(87, 85, 85);
+
+.btn-style-header {
+  border: none;
+  background-color: rgb(75, 86, 122);
+  cursor: pointer;
 }
-.btn-style-header:focus{
-    border-radius: 9%;
-    background-color: rgb(122, 120, 120);
+
+.btn-style-header:hover {
+  border-radius: 9%;
+  background-color: rgb(87, 85, 85);
 }
-.centrar{
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    align-items: center;
+
+.btn-style-header:focus {
+  border-radius: 9%;
+  background-color: rgb(122, 120, 120);
 }
-.main-size{
-    height: 85vh;
+
+.centrar {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
 }
+
+.main-size {
+  height: 85vh;
+}
+
 .bg-negro {
-    background-color: rgba(54, 52, 52, 0.979);
-    height: min-content;
-}
-.bg-morado-palido{
-    background: rgb(216, 210, 219);
-    /*background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(149,63,63,1) 50%, rgba(252,176,69,1) 100%);
-    */
-    height: 95vmin;
-}
-.paralelo{
-    display: flex;
-    justify-content: space-around;
-}
-.espacio{
-    margin: 15px;
-}
-.transparencia{
-    background-color: rgba(36, 31, 31, 0.452);  
-    backdrop-filter: blur(5px);   
-    border-radius: 3%; 
-}
-.comida{
-    width: 40%;
-    height: 100%;
-    margin: 0px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: rgb(0, 0, 0) solid 0.5px;
-    border-radius: 5%;   
-}
-.total-comida{
-    width: 40%;
-    height: 100%;
-    margin: 0px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: rgb(0, 0, 0) solid 0.5px;
-    border-radius: 5%;  
-}
-.botones{
-    margin: 15px;
-    display: inline-grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
-    grid-gap: 20px;
-}
-.btn-style{
-    border: none;
-    border-radius: 5%;
-    height: clamp(12.5vh, 25vh, 50vh);
-    padding: 10%;
+  background-color: rgba(54, 52, 52, 0.979);
+  height: min-content;
 }
 
-.img-size{
-    height: clamp(50%, 75%, 100%);
-    max-width: 100%;
+.bg-morado-palido {
+  background: rgb(216, 210, 219);
+  /*background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(149,63,63,1) 50%, rgba(252,176,69,1) 100%);
+    */
+  height: 95vmin;
 }
-.focus{
-    box-shadow: 3px 4px rgb(46, 45, 45);
-    cursor: pointer;
+
+.paralelo {
+  display: flex;
+  justify-content: space-around;
 }
-.focus:hover{
-    background-color: rgb(101, 107, 167);
+
+.espacio {
+  margin: 15px;
+}
+
+.transparencia {
+  background-color: rgba(36, 31, 31, 0.452);
+  backdrop-filter: blur(5px);
+  border-radius: 3%;
+}
+
+.comida {
+  width: 40%;
+  height: 100%;
+  margin: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: rgb(0, 0, 0) solid 0.5px;
+  border-radius: 5%;
+}
+
+.total-comida {
+  width: 40%;
+  height: 100%;
+  margin: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: rgb(0, 0, 0) solid 0.5px;
+  border-radius: 5%;
+}
+
+.botones {
+  margin: 15px;
+  display: inline-grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+}
+
+.btn-style {
+  border: none;
+  border-radius: 5%;
+  height: clamp(12.5vh, 25vh, 50vh);
+  padding: 10%;
+}
+
+.img-size {
+  height: clamp(50%, 75%, 100%);
+  max-width: 100%;
+}
+
+.focus {
+  box-shadow: 3px 4px rgb(46, 45, 45);
+  cursor: pointer;
+}
+
+.focus:hover {
+  background-color: rgb(101, 107, 167);
+}
+
+.selected {
+
+}
+
+.selected-dark {
+    
 }
