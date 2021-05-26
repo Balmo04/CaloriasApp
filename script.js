@@ -3,10 +3,11 @@ const btnBurger=document.getElementById("burger");
 const btnSoda=document.getElementById("soda");
 const btnPizza=document.getElementById("pizza");
 const btnIceCream=document.getElementById("ice-cream");
+const caloriasApp=document.getElementById("calorias-app")
 
 let cantDarkMode=false;
 let cantSelect=false;
-let points=[5,10,15,20]
+let points=[5,10,15,20];
 let a=0,b=0,c=0,d=0;
 
 burger.verInfo();
@@ -15,76 +16,72 @@ soda.verInfo();
 pizza.verInfo();
 
 btnBurger.addEventListener("click", function(){
-    a=  assignBurgerPoints(points,cantSelect);
-    totalPuntos(a,b,c,d);
+   assignBurgerPoints(points,cantSelect);
 });
 btnSoda.addEventListener("click", function(){
-    b=  assignSodaPoints(points,cantSelect);
-    totalPuntos(a,b,c,d);
+    assignSodaPoints(points,cantSelect);
 });
 btnPizza.addEventListener("click", function(){
-    c=  assignPizzaPoints(points,cantSelect);
-    totalPuntos(a,b,c,d);
+    assignPizzaPoints(points,cantSelect);
 });
 btnIceCream.addEventListener("click", function(){
-    d=  assignIceCreamPoints(points,cantSelect);
-    totalPuntos(a,b,c,d);
+    assignIceCreamPoints(points,cantSelect);
 });
 
-function assignBurgerPoints(points1, isntSelect){
+function assignBurgerPoints(points0, isntSelect){
     let calBurger=0;
+    isntSelect=!isntSelect;
     if(isntSelect)
     {
+        calBurger=points0[0];
+    }
+    else
+    {   
         calBurger=0;
     }
-    else
-    {
-        calBurger=points1[0];
-    }
-    isntSelect=!isntSelect;
-    return calBurger;
+    console.log(calBurger);
 }
-function assignIceCreamPoints(points2, isntSelect){
+
+function assignIceCreamPoints(points1, isntSelect){
     let calIceCream=0;
+    isntSelect=!isntSelect;
     if(isntSelect)
     {
-        calIceCream=0;
+        calIceCream=points1[1];  
     }
     else
     {
-        calIceCream=points2[1];
+        calIceCream=0; 
     }
-    isntSelect=!isntSelect;
-    return calIceCream;
 }
-function assignPizzaPoints(points3, isntSelect){
+
+function assignPizzaPoints(points2, isntSelect){
     let calPizza=0;
+    isntSelect=!isntSelect;
     if(isntSelect)
     {
-        calPizza=0; 
+        calPizza=points2[2]; 
     }
     else
     {
-        calPizza=points3[2];
+        calPizza=0;    
     }
-    isntSelect=!isntSelect;
-    return calPizza;
 }
-function assignSodaPoints(points4, isntSelect){
+
+function assignSodaPoints(points3, isntSelect){
     let calSoda=0;
+    isntSelect=!isntSelect;
     if(isntSelect)
     {
-        calSoda=points4[3];
+        calSoda=points3[3]; 
     }
     else
     {
-        calSoda=0;
+        calSoda=0;   
     }
-    isntSelect=!isntSelect;
-    return calSoda;
 }
 
 function totalPuntos(calPizza,calBurger,CalSoda,calIceCream){
- let totalCal=calPizza+calBurger+CalSoda+calIceCream;
- console.log(totalCal);
+    let totalCal=calPizza+calBurger+CalSoda+calIceCream;
+    caloriasApp.innerText=totalCal;
 }
