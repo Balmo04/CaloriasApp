@@ -1,44 +1,65 @@
-const allBtn=document.getElementsByClassName("all-btn")
-const txtCalPoints=document.getElementById("calorias-app")
-
-let canDarkMode=false;
-let total=0;
+const allBtn=document.getElementsByClassName("all-btn");
+const txtCalPoints=document.getElementById("calorias-app");
+const btnDarkMode=document.getElementById("btn-dark-mode");
 
 for(let i=0; i<allBtn.length; i++)
 {
     allBtn[i].addEventListener("click", function(){
-        assignValue(obj[i]);
+        assignValue(obj[i], i);
     });
 }
 
-function assignValue(objeto)
+function assignValue(object, position)
 {
-    objeto.isPoint=!objeto.isPoint;
-    suma(objeto.isPoint, objeto.points);
-    styleBtn(objeto.isPoint);
+    object.isPoint=!object.isPoint;
+    suma(object.isPoint, object.points); 
+    assignStyle(object.isPoint, position);
 }
-
+let total=0;
 function suma(isSelected, value)
 {
-    if(isSelected)
-    {
+    if(isSelected){
+        
         total+=value;
     }
-    else
-    {
+    else {
         total-=value;
     }
     txtCalPoints.innerText=total;
 }
 
-function styleBtn(isSelected, canDarkMode){
-    canDarkMode=!canDarkMode;
-    if(isSelected && canDarkMode)
+function assignStyle(isSelected, position){
+    if(isSelected)
     {
-        //Seleccionado y modo oscuro
+        allBtn[position].classList.add("focus");
     }
     else
     {
-        //seleccionado 
+        allBtn[position].classList.remove("focus");
+    }
+}
+
+let isDarkMode=false;
+btnDarkMode.addEventListener("click", function(){   
+    isDarkMode=!isDarkMode;//Lo niega en todo 
+    changeStylePage();
+});
+
+function changeStylePage(){
+    if(isDarkMode)
+    {
+        console.log(isDarkMode);
+    }
+    else{
+        console.log(isDarkMode); 
+    }
+    //putDarkModeValue(isDarkMode);
+}
+
+function putDarkModeValue(stage){
+    for(let i=0; i<allBtn.length; i++)
+    {
+        allBtn[i].value=stage;
+        console.log(allBtn[i].value);
     }
 }
