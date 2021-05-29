@@ -1,6 +1,11 @@
 const allBtn=document.getElementsByClassName("all-btn");
-const txtCalPoints=document.getElementById("calorias-app");
+const txtCalPoints=document.getElementById("calorie-accumulator");
 const btnDarkMode=document.getElementById("btn-dark-mode");
+const header=document.getElementById("header");
+const headerTitles=document.getElementById("header-titles");
+const main=document.getElementById("main");
+const sectionFood=document.getElementById("section-food-text");
+const sectionTotal=document.getElementById("section-total-texto")
 
 for(let i=0; i<allBtn.length; i++)
 {
@@ -48,10 +53,18 @@ btnDarkMode.addEventListener("click", function(){
 function changeStylePage(){
     if(isDarkMode)
     {
-        console.log(isDarkMode);
+        header.classList.add("bg-blue");
+        headerTitles.classList.add("txt-white");
+        main.classList.add("bg-gray");
+        sectionFood.classList.add("txt-white");
+        sectionTotal.classList.add("txt-white");
     }
     else{
-        console.log(isDarkMode); 
+        header.classList.remove("bg-blue");
+        headerTitles.classList.remove("txt-white");
+        main.classList.remove("bg-gray");
+        sectionFood.classList.remove("txt-white");
+        sectionTotal.classList.remove("txt-white");        
     }
     //putDarkModeValue(isDarkMode);
 }
