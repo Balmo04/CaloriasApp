@@ -9,7 +9,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 10vh;
+}
+.header-size{
+  height: 15vh;
 }
 
 .img-size-header {
@@ -57,7 +59,7 @@
   height: 95vmin;
 }
 
-.paralelo {
+.display {
   display: flex;
   justify-content: space-around;
 }
@@ -134,4 +136,32 @@
 .focus {
   box-shadow: 3px 4px rgb(46, 45, 45);
   background-color: rgb(101, 107, 167);
+}
+/*RESPONSIVE DESIGN*/
+@media screen and (max-width: 600px){
+  
+  .main-size {
+    height: auto;
+    }
+ 
+  .section-btn-food {
+    width: 100%;
+    height: 85vh;
+    margin: 0%;
+  }
+  .section-total-food{
+    width: 100%;
+    height: 15vh;
+    margin: 0%;
+  }
+  .display{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    height: auto;
+  } 
+  .margin{
+    margin: 0%;
+  }
+  
 }
