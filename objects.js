@@ -1,10 +1,10 @@
 /*Esta es mi clase para desarrollar objetos*/
 class pointList {
     /*Necesita de un constructor donde se pasan parametros*/
-    constructor(food, points, isPoint){
+    constructor(food, points, isValue){
         this.food=food; /*this.food: es el atributo so puedo poder this.comida o otra cosa. Y =food es el parametro, tiene que ser el mismo*/
         this.points=points;
-        this.isPoint=isPoint;
+        this.isValue=isValue;
     } 
     /*Cualquier funcion dentro de la clase, por lo que se llama metodo*/
    
