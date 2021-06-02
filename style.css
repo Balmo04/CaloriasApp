@@ -1,3 +1,35 @@
+@font-face {
+  font-family: 'black_jackregular';
+  src: url('fuentes/blackjack-webfont.woff') format('woff2'),
+       url('fuentes/blackjack-webfont.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'hello_avocadoregular';
+  src: url('fuentes/hello_avocado-webfont.woff2') format('woff2'),
+       url('fuentes/hello_avocado-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'helloregular';
+  src: url('fuentes/hello-webfont.woff2') format('woff2'),
+       url('fuentes/hello-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chrismasterregular';
+  src: url('fuentes/chrismaster-webfont.woff2') format('woff2'),
+       url('fuentes/chrismaster-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 * {
   margin: 0%;
   padding: 0%;
@@ -16,6 +48,13 @@
 
 .img-size-header {
   height: 3.5em;
+}
+.title-font-family{
+  font-family: 'hello_avocadoregular';
+  font-weight: 100;
+}
+.subtitle-font-family{
+  font-family: 'chrismasterregular';
 }
 
 .btn-header-size {
@@ -106,7 +145,7 @@
   grid-gap: 20px;
 }
 
-.btn-section-style {
+.btn-section-style{
   cursor: pointer;
   border: none;
   border-radius: 5%;
@@ -115,7 +154,7 @@
 }
 
 .btn-section-style:hover {
-  background-color: rgb(12, 30, 231);
+  background-color: rgb(66, 143, 179);
 }
 
 .img-size {
@@ -133,10 +172,18 @@
 .bg-gray{
   background-color: rgb(43, 42, 42);
 }
-.focus {
+.btn-section-style-dark-mode {
+  box-shadow: 3px 4px rgb(231, 229, 229);
+  background-color: #123;
+}
+
+.btn-section-style-day-mode {
   box-shadow: 3px 4px rgb(46, 45, 45);
   background-color: rgb(101, 107, 167);
 }
+
+
+
 /*RESPONSIVE DESIGN*/
 @media screen and (max-width: 600px){
   
