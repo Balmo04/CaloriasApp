@@ -1,11 +1,16 @@
-const allBtn=document.getElementsByClassName("all-btn");
-const txtCalPoints=document.getElementById("calorie-accumulator");
-const btnDarkMode=document.getElementById("btn-dark-mode");
+/*Para el dark mode*/
 const header=document.getElementById("header");
 const headerTitles=document.getElementById("header-titles");
 const main=document.getElementById("main");
 const sectionFood=document.getElementById("section-food-text");
-const sectionTotal=document.getElementById("section-total-texto")
+const sectionTotal=document.getElementById("section-total-texto");
+/*Funcionalidad*/
+const allBtn=document.getElementsByClassName("all-btn");
+const txtCalPoints=document.getElementById("calorie-accumulator");
+const btnDarkMode=document.getElementById("btn-dark-mode");
+
+let total=0;
+let isDarkMode=false;
 
 for(let i=0; i<allBtn.length; i++)
 {
@@ -16,11 +21,11 @@ for(let i=0; i<allBtn.length; i++)
 
 function assignValue(object, position)
 {
-    object.isPoint=!object.isPoint;
-    suma(object.isPoint, object.points); 
-    assignStyle(object.isPoint, position);
+    object.isValue=!object.isValue;
+    suma(object.isValue, object.points); 
+    assignStyle(object.isValue, position);
 }
-let total=0;
+
 function suma(isSelected, value)
 {
     if(isSelected){
@@ -36,15 +41,22 @@ function suma(isSelected, value)
 function assignStyle(isSelected, position){
     if(isSelected)
     {
-        allBtn[position].classList.add("focus");
+        if(isDarkMode){
+            allBtn[position].classList.add("btn-section-style-dark-mode"); 
+        }
+        else{
+            allBtn[position].classList.add("btn-section-style-day-mode");
+        }
+        
     }
     else
     {
-        allBtn[position].classList.remove("focus");
+        allBtn[position].classList.remove("btn-section-style-dark-mode");
+        allBtn[position].classList.remove("btn-section-style-day-mode"); 
     }
 }
 
-let isDarkMode=false;
+
 btnDarkMode.addEventListener("click", function(){   
     isDarkMode=!isDarkMode;//Lo niega en todo 
     changeStylePage();
@@ -65,14 +77,5 @@ function changeStylePage(){
         main.classList.remove("bg-gray");
         sectionFood.classList.remove("txt-white");
         sectionTotal.classList.remove("txt-white");        
-    }
-    //putDarkModeValue(isDarkMode);
-}
-
-function putDarkModeValue(stage){
-    for(let i=0; i<allBtn.length; i++)
-    {
-        allBtn[i].value=stage;
-        console.log(allBtn[i].value);
     }
 }
