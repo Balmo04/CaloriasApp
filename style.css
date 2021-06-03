@@ -42,8 +42,9 @@
   align-items: center;
   justify-content: space-around;
 }
-.header-size{
-  height: 15vh;
+
+:is(.header-size, .footer-size){
+  height: 11vh;
 }
 
 .img-size-header {
@@ -51,10 +52,12 @@
 }
 .title-font-family{
   font-family: 'hello_avocadoregular';
-  font-weight: 100;
+  font-weight: lighter;
+  font-size: 2rem;
 }
 .subtitle-font-family{
   font-family: 'chrismasterregular';
+  font-size: 1.1rem;
 }
 
 .btn-header-size {
@@ -85,7 +88,7 @@
 }
 
 .main-size {
-  height: 85vh;
+  height: 80vh;
 }
 
 .bg-black {
@@ -95,7 +98,7 @@
 
 .bg-light-purple {
   background: rgb(216, 210, 219);
-  height: 95vmin;
+  height: auto;
 }
 
 .display {
@@ -103,7 +106,7 @@
   justify-content: space-around;
 }
 
-.margin {
+.margin-btw-sections {
   margin: 15px;
 }
 
@@ -115,7 +118,7 @@
 
 .section-btn-food {
   width: 40%;
-  height: 100%;
+  height: 80vh;
   margin: 0px 15px;
   display: flex;
   flex-direction: column;
@@ -127,7 +130,7 @@
 
 .section-total-food {
   width: 40%;
-  height: 100%;
+  height: 80vh;
   margin: 0px 15px;
   display: flex;
   flex-direction: column;
