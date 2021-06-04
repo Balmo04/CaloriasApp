@@ -11,10 +11,6 @@
 <body class="bg-black">
     <header id="header" class="bg-red space-around header-size">
         <img src="img/logo/logo-light.fw.png" class="img-size-header r-margin" alt="Logo"/> 
-        <hgroup id="header-titles" class="center">
-            <h1 class="title-font-family ">Calorias App</h1>
-            <h4 class="ff-subtitle">Emerson Arévalo</h4>
-        </hgroup>
         <button id="btn-dark-mode" class="btn-header-size btn-pointer l-margin bg-red">
             <img src="img/logo/luna.png" class="img-size-header" alt="DarkMode"/>
         </button>
@@ -22,8 +18,8 @@
     <main id="main" class="bg-white together">
             <section id="section-food-text" class="btn-section">
                 <div class="center spacing">
-                    <h2  class="ff-subtitle">¿Y tú qué comes?</h2>
-                    <article>Selecciona la comida para saber cuantas calorias tiene </article>
+                    <h2  class="ff-title">¿Y tú qué comes?</h2>
+                    <article class="ff-text">Selecciona la comida para saber cuantas calorias tiene </article>
                 </div>
                 <div class="transparency center margin-top"> 
                     <div class="grid-template">
@@ -42,12 +38,14 @@
                     </div>
                 </div> 
             </section>
-            <section id="section-total-text" class="total-section">
-                <h3 class="title-font-family">Calorias totales</h3>
+            <section id="section-total-text" class="total-section">           
                 <h2 id="calorie-accumulator" class="ff-total">0</h2>
-                <h3 class="title-font-family">Calorias</h3>
+                <h3 class="ff-title">Calorias totales</h3>
             </section> 
     </main>
+    <footer id="footer" class="bg-red footer-size center-footer">
+            <h4 class="ff-subtitle">Emerson Arévalo</h4>
+    </footer>
     <script src="objects.js"></script>
     <script src="script.js"></script>
 </body>

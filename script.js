@@ -1,10 +1,9 @@
 /*Para el dark mode*/
 const header=document.getElementById("header");
-const headerTitles=document.getElementById("header-titles");
 const main=document.getElementById("main");
 const sectionFood=document.getElementById("section-food-text");
 const sectionTotal=document.getElementById("section-total-text");
-const transparency=document.getElementsByClassName("transparency");
+const footer=document.getElementById("footer");
 /*Funcionalidad*/
 const allBtn=document.getElementsByClassName("all-btn");
 const txtCalPoints=document.getElementById("calorie-accumulator");
@@ -63,10 +62,11 @@ function changeStylePage(){
     {
         btnDarkMode.classList.replace("bg-red", "bg-blue");
         header.classList.replace("bg-red", "bg-blue");
-        headerTitles.classList.add("txt-white");
         main.classList.replace("bg-white","bg-gray");
         sectionFood.classList.add("txt-white");
         sectionTotal.classList.add("txt-white");
+        footer.classList.replace("bg-red", "bg-blue");
+        footer.classList.add("txt-white");
         for(i=0; i<allBtn.length; i++){
             allBtn[i].classList.replace("btn-light-mode","btn-dark-mode");       
         }
@@ -74,10 +74,11 @@ function changeStylePage(){
     else{
         btnDarkMode.classList.replace("bg-blue", "bg-red");
         header.classList.replace("bg-blue", "bg-red");
-        headerTitles.classList.remove("txt-white");
         main.classList.replace("bg-gray","bg-white");
         sectionFood.classList.remove("txt-white");
-        sectionTotal.classList.remove("txt-white"); 
+        sectionTotal.classList.remove("txt-white");
+        footer.classList.replace("bg-blue", "bg-red"); 
+        footer.classList.remove("txt-white");
         for(i=0; i<allBtn.length; i++){
             allBtn[i].classList.replace("btn-dark-mode","btn-light-mode")
         }    

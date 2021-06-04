@@ -1,25 +1,5 @@
-@font-face {
-  font-family: "black_jackregular";
-  src: url("fuentes/blackjack-webfont.woff") format("woff2"),
-    url("fuentes/blackjack-webfont.woff2") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "hello_avocadoregular";
-  src: url("fuentes/hello_avocado-webfont.woff2") format("woff2"),
-    url("fuentes/hello_avocado-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ds-digitalnormal';
-  src: url('fuentes/ds-digi-webfont.woff2') format('woff2'),
-       url('fuentes/ds-digi-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
 /*REGLAS PARA TODO*/
 * {
@@ -37,8 +17,8 @@
 .bg-red {
   background-color: #A71D31;
 }
-.header-size{
-  height: 5rem;
+:is(.header-size, .footer-size){
+  height: 10vh;
   padding: 1.5rem;
   width: 100vw;
 }
@@ -53,12 +33,6 @@
 }
 .r-margin{
   margin-left: 2.5%; 
-}
-
-.title-font-family {
-  font-family: "hello_avocadoregular";
-  font-weight: lighter;
-  font-size: 1.4rem;
 }
 
 .btn-header-size {
@@ -101,11 +75,20 @@
 .spacing {
   margin: 0px 15px 0px; 
 }
+.ff-title{  
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.5rem;
+}
 .ff-subtitle{
-  font-family: "black_jackregular";
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+}
+.ff-text{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.3rem;
 }
 .ff-total{
-  font-family: 'ds-digitalnormal';
+  font-family: 'Amatic SC', cursive;
   font-size: 5.4rem;
 }
 /***SECCIONES***/
@@ -126,7 +109,7 @@
 /****TAMAÑO DE LAS SECCIONES****/
 :is(.btn-section, .total-section){
   width: 40%;
-  height: 90vh;
+  height: 80vh;
   margin: 0px 15px;
   display: flex;
   flex-direction: column;
@@ -154,7 +137,12 @@
 .margin-top{
   margin-top: 3%;
 }
-
+/*****FOOTER*****/
+.center-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /*RESPONSIVE DESIGN*/
 @media screen and (max-width: 600px) {
   .main-size {
