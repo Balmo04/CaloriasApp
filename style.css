@@ -14,20 +14,13 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "helloregular";
-  src: url("fuentes/hello-webfont.woff2") format("woff2"),
-    url("fuentes/hello-webfont.woff") format("woff");
+  font-family: 'ds-digitalnormal';
+  src: url('fuentes/ds-digi-webfont.woff2') format('woff2'),
+       url('fuentes/ds-digi-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: "chrismasterregular";
-  src: url("fuentes/chrismaster-webfont.woff2") format("woff2"),
-    url("fuentes/chrismaster-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 /*REGLAS PARA TODO*/
 * {
   margin: 0%;
@@ -45,7 +38,8 @@
   background-color: #A71D31;
 }
 .header-size{
-  height: 13vh;
+  height: 5rem;
+  padding: 1.5rem;
   width: 100vw;
 }
 .space-around {
@@ -65,11 +59,6 @@
   font-family: "hello_avocadoregular";
   font-weight: lighter;
   font-size: 2rem;
-}
-
-.subtitle-font-family {
-  font-family: "chrismasterregular";
-  font-size: 1.1rem;
 }
 
 .btn-header-size {
@@ -112,6 +101,14 @@
 .spacing {
   margin: 0px 15px 0px; 
 }
+.ff-subtitle{
+  font-family: "black_jackregular";
+}
+.ff-total{
+  font-family: 'ds-digitalnormal';
+  font-size: 5.4rem;
+  font-style: italic;
+}
 /***SECCIONES***/
 .grid-template {
   margin: 15px;
@@ -141,7 +138,7 @@
 }
 
 .btn-size:hover {
-  background-color: rgb(66, 143, 179);
+  background-color: #4184f4;
 }
 /**SECION DE TOTAL DE COMIDA**/
 
@@ -155,9 +152,13 @@
   height: clamp(50%, 75%, 100%);
   max-width: 100%;
 }
+.margin-top{
+  margin-top: 3%;
+}
 
 /*RESPONSIVE DESIGN*/
 @media screen and (max-width: 600px) {
+  
   .main-size {
     height: auto;
   }
@@ -168,11 +169,11 @@
   }
   .btn-section{
     width: 100%;
-    height: 85vh;
+    height: 75vh;
   }
   .total-section{
     width: 100%;
-    height: 15vh;
+    height: 25vh;
   }
   .spacing{
     margin: 0%;
@@ -190,11 +191,11 @@
   color: #ffffff;
 }
 .btn-dark-mode {
-  box-shadow: 3px 4px #e7e5e5;
-  background-color: #123;
+  box-shadow: 3px 5px #2e2d2d;
+  background-color: rgb(74, 112, 141);
 }
 
 .btn-light-mode {
   box-shadow: 3px 4px #2e2d2d;
-  background-color: #656ba7;
+  background-color: #d42741;
 }
