@@ -9,48 +9,44 @@
     <title>Calorias App</title>
 </head>
 <body class="bg-black">
-    <header id="header" class="bg-purple header-size">
-        <img src="img/logo/logo-light.fw.png" class="img-size-header" alt="Logo">  
-        <button id="btn-dark-mode" class="btn-header-size btn-header-style">
+    <header id="header" class="bg-red space-around header-size">
+        <img src="img/logo/logo-light.fw.png" class="img-size-header r-margin" alt="Logo"/> 
+        <hgroup id="header-titles" class="center">
+            <h1 class="title-font-family ">Calorias App</h1>
+            <h4 class="subtitle-font-family">Emerson Arévalo</h4>
+        </hgroup>
+        <button id="btn-dark-mode" class="btn-header-size btn-pointer l-margin bg-red">
             <img src="img/logo/luna.png" class="img-size-header" alt="DarkMode"/>
         </button>
     </header>
-    <main class="main-size">
-       <div id="main" class="bg-light-purple display">
-            <section class="section-btn-food">
-                <div id="section-food-text" class="center margin-btw-sections">
+    <main id="main" class="bg-white together">
+            <section id="section-food-text" class="btn-section">
+                <div class="center spacing">
                     <h2>¿Y tú qué comes?</h2>
                     <article>Selecciona la comida para saber cuantas calorias tiene </article>
                 </div>
                 <div class="transparency center"> 
-                    <div class="botones">
-                        <button  class="all-btn btn-section-style ">
+                    <div class="grid-template">
+                        <button  class="all-btn btn-pointer btn-size">
                             <img src="img/hamburger-2.png" class="img-size" alt="Hamburguesa"/>
                         </button>
-                        <button  class="all-btn btn-section-style ">
+                        <button  class="all-btn btn-pointer btn-size">
                             <img src="img/soda-2.png" class="img-size" alt="Soda"/>
                         </button>
-                        <button  class="all-btn btn-section-style ">
+                        <button  class="all-btn btn-pointer btn-size">
                             <img src="img/ice-cream-2.png" class="img-size" alt="Helado"/>
                         </button>
-                        <button  class="all-btn btn-section-style ">
+                        <button  class="all-btn btn-pointer btn-size">
                             <img src="img/pizza-2.png" class="img-size" alt="Pizza"/>
                         </button>
                     </div>
                 </div> 
             </section>
-            <section id="section-total-texto" class="section-total-food">
+            <section id="section-total-text" class="total-section">
                 <h2 id="calorie-accumulator">0</h2>
                 <h3>Total de Calorias</h3>
             </section> 
-        </div>
     </main>
-    <footer class="footer-size bg-purple">
-        <hgroup id="footer-titles" class="center">
-            <h1 class="title-font-family ">Calorias App</h1>
-            <h4 class="subtitle-font-family">Emerson Arévalo</h4>
-        </hgroup>
-    </footer>
     <script src="objects.js"></script>
     <script src="script.js"></script>
 </body>

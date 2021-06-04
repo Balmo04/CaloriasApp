@@ -1,83 +1,94 @@
 @font-face {
-  font-family: 'black_jackregular';
-  src: url('fuentes/blackjack-webfont.woff') format('woff2'),
-       url('fuentes/blackjack-webfont.woff2') format('woff');
+  font-family: "black_jackregular";
+  src: url("fuentes/blackjack-webfont.woff") format("woff2"),
+    url("fuentes/blackjack-webfont.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'hello_avocadoregular';
-  src: url('fuentes/hello_avocado-webfont.woff2') format('woff2'),
-       url('fuentes/hello_avocado-webfont.woff') format('woff');
+  font-family: "hello_avocadoregular";
+  src: url("fuentes/hello_avocado-webfont.woff2") format("woff2"),
+    url("fuentes/hello_avocado-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'helloregular';
-  src: url('fuentes/hello-webfont.woff2') format('woff2'),
-       url('fuentes/hello-webfont.woff') format('woff');
+  font-family: "helloregular";
+  src: url("fuentes/hello-webfont.woff2") format("woff2"),
+    url("fuentes/hello-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'chrismasterregular';
-  src: url('fuentes/chrismaster-webfont.woff2') format('woff2'),
-       url('fuentes/chrismaster-webfont.woff') format('woff');
+  font-family: "chrismasterregular";
+  src: url("fuentes/chrismaster-webfont.woff2") format("woff2"),
+    url("fuentes/chrismaster-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
-
+/*REGLAS PARA TODO*/
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
 
-.bg-purple {
-  background: rgb(75, 86, 122);
+.bg-black {
+  background-color: #363434fa;
+  height: min-content;
+}
+
+/**HEADER**/
+.bg-red {
+  background-color: #A71D31;
+}
+.header-size{
+  height: 13vh;
+  width: 100vw;
+}
+.space-around {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
+}
+.l-margin{
+  margin-right: 2.5%;
+  margin-left: 5%;
+}
+.r-margin{
+  margin-left: 2.5%; 
 }
 
-:is(.header-size, .footer-size){
-  height: 11vh;
-}
-
-.img-size-header {
-  height: 3.5em;
-}
-.title-font-family{
-  font-family: 'hello_avocadoregular';
+.title-font-family {
+  font-family: "hello_avocadoregular";
   font-weight: lighter;
   font-size: 2rem;
 }
-.subtitle-font-family{
-  font-family: 'chrismasterregular';
+
+.subtitle-font-family {
+  font-family: "chrismasterregular";
   font-size: 1.1rem;
 }
 
 .btn-header-size {
-  width: fit-content;
+  height: auto;
+  width: auto;
 }
 
-.btn-header-style {
+.img-size-header {
+  height: 4em;
+  object-fit: contain;
+}
+
+.btn-pointer {
   border: none;
-  background-color: rgb(75, 86, 122);
   cursor: pointer;
 }
-
-.btn-header-style:hover {
+.btn-pointer:hover {
   border-radius: 9%;
   background-color: rgb(87, 85, 85);
-}
-
-.btn-header-style:focus {
-  border-radius: 9%;
-  background-color: rgb(122, 120, 120);
 }
 
 .center {
@@ -86,61 +97,23 @@
   justify-content: baseline;
   align-items: center;
 }
-
-.main-size {
-  height: 80vh;
-}
-
-.bg-black {
-  background-color: rgba(54, 52, 52, 0.979);
-  height: min-content;
-}
-
-.bg-light-purple {
-  background: rgb(216, 210, 219);
+/**MAIN**/
+.together{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
   height: auto;
 }
-
-.display {
-  display: flex;
-  justify-content: space-around;
+.bg-white {
+  background: #F1FFFA;
+  height: auto;
 }
-
-.margin-btw-sections {
-  margin: 15px;
+.spacing {
+  margin: 0px 15px 0px; 
 }
-
-.transparencia {
-  background-color: rgba(36, 31, 31, 0.452);
-  backdrop-filter: blur(5px);
-  border-radius: 3%;
-}
-
-.section-btn-food {
-  width: 40%;
-  height: 80vh;
-  margin: 0px 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: rgb(0, 0, 0) solid 0.5px;
-  border-radius: 5%;
-}
-
-.section-total-food {
-  width: 40%;
-  height: 80vh;
-  margin: 0px 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: rgb(0, 0, 0) solid 0.5px;
-  border-radius: 5%;
-}
-
-.botones {
+/***SECCIONES***/
+.grid-template {
   margin: 15px;
   display: inline-grid;
   grid-template-rows: auto auto;
@@ -148,16 +121,34 @@
   grid-gap: 20px;
 }
 
-.btn-section-style{
-  cursor: pointer;
-  border: none;
+.transparency{
+  background-color: rgb(92, 88, 88);
+  backdrop-filter: blur(5px);
+  border-radius: 3%;
+}
+
+/****TAMAÑO DE LAS SECCIONES****/
+:is(.btn-section, .total-section){
+  width: 40%;
+  height: 90vh;
+  margin: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: rgb(0, 0, 0) solid 0.5px;
+  border-radius: 5%;
+}
+
+.btn-size:hover {
+  background-color: rgb(66, 143, 179);
+}
+/**SECION DE TOTAL DE COMIDA**/
+
+.btn-size {
   border-radius: 5%;
   height: clamp(12.5vh, 25vh, 50vh);
   padding: 10%;
-}
-
-.btn-section-style:hover {
-  background-color: rgb(66, 143, 179);
 }
 
 .img-size {
@@ -165,53 +156,45 @@
   max-width: 100%;
 }
 
+/*RESPONSIVE DESIGN*/
+@media screen and (max-width: 600px) {
+  .main-size {
+    height: auto;
+  }
+  .together {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: inherit;
+  }
+  .btn-section{
+    width: 100%;
+    height: 85vh;
+  }
+  .total-section{
+    width: 100%;
+    height: 15vh;
+  }
+  .spacing{
+    margin: 0%;
+  }
+}
+
 /*MODO OSCURO*/
-.bg-blue{
-  background: rgb(4, 16, 58);
+.bg-blue {
+  background: #002B3D;
 }
-.txt-white{
-  color: rgb(250, 239, 239);
+.bg-gray {
+  background-color: #2A2D34;
 }
-.bg-gray{
-  background-color: rgb(43, 42, 42);
+.txt-white {
+  color: #ffffff;
 }
-.btn-section-style-dark-mode {
-  box-shadow: 3px 4px rgb(231, 229, 229);
+.btn-dark-mode {
+  box-shadow: 3px 4px #e7e5e5;
   background-color: #123;
 }
 
-.btn-section-style-day-mode {
-  box-shadow: 3px 4px rgb(46, 45, 45);
-  background-color: rgb(101, 107, 167);
-}
-
-
-
-/*RESPONSIVE DESIGN*/
-@media screen and (max-width: 600px){
-  
-  .main-size {
-    height: auto;
-    }
- 
-  .section-btn-food {
-    width: 100%;
-    height: 85vh;
-    margin: 0%;
-  }
-  .section-total-food{
-    width: 100%;
-    height: 15vh;
-    margin: 0%;
-  }
-  .display{
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    height: auto;
-  } 
-  .margin{
-    margin: 0%;
-  }
-  
+.btn-light-mode {
+  box-shadow: 3px 4px #2e2d2d;
+  background-color: #656ba7;
 }
