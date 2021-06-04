@@ -58,7 +58,7 @@
 .title-font-family {
   font-family: "hello_avocadoregular";
   font-weight: lighter;
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 .btn-header-size {
@@ -107,7 +107,6 @@
 .ff-total{
   font-family: 'ds-digitalnormal';
   font-size: 5.4rem;
-  font-style: italic;
 }
 /***SECCIONES***/
 .grid-template {
@@ -158,7 +157,6 @@
 
 /*RESPONSIVE DESIGN*/
 @media screen and (max-width: 600px) {
-  
   .main-size {
     height: auto;
   }
